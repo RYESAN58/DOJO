@@ -6,6 +6,24 @@ const cook = document.getElementById('col3');
 cook.remove();
 
 }
+
+
+async function getCoderData() {
+    var response = await fetch("https://api.openweathermap.org/data/2.5/weather?q=san%20jose,ca,usa&appid=eb8ae1a8b42a97ae78902ca924a362a4");
+    var coderData = await response.json();
+    var temp = document.querySelectorAll('.hot');
+    var temp2 = document.querySelectorAll('.cold');
+    for (i =0; i < temp.length; i++){
+        temp[i].innerText = Math.round(coderData.main.temp -273.15);
+        temp2[i].innerText = Math.round(coderData.main.feels_like -273.15);
+    }
+
+    console.log(coderData.main.temp -273.15)
+    return coderData;
+}
+console.log('THIS IS ', getCoderData)
+
+getCoderData()
 function deg(elm){
     console.log(elm);
     var temp = document.querySelectorAll('.hot');
@@ -25,5 +43,6 @@ function deg(elm){
             temp2[i].innerText = l
         }
 
-        }
+    }
 }
+
