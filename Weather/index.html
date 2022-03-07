@@ -11,9 +11,9 @@
 <body>
     <div id="nav">
         <h1 id="heading" onclick="loading()">DojoWeather</h1>
-        <a class="nav-link" onclick="loading()">Burbank</a>
-        <a class="nav-link" onclick="loading()">Chicago</a>
-        <a class="nav-link" onclick="loading()">Dallas</a>
+        <a class="nav-link" onclick="loading(this)" value="burbank" >Burbank</a>
+        <a class="nav-link" onclick="loading(this)"value="burbank">Chicago</a>
+        <a class="nav-link" onclick="loading(this)"value="burbank">Dallas</a>
     </div>
     <div id ="main">
         <div id="col1">            
@@ -30,25 +30,25 @@
             <div id= "row1"  class="content">
                 <h3>Today</h3>
                 <img src="images/some_rain.png" alt="dark cloud with some rain" class="img">
-                <p>some rain</p>
+                <p class="info">some rain</p>
                 <p><span class="hot">24</span>°<span class="cold">18</span>°</p>
             </div>
             <div id= "row2" class="content">
                 <h3>Tomorrow</h3>
                 <img src="images/some_sun.png" alt="The Sun shining" class="img">
-                <p>some sun</p>
+                <p class="info">some sun</p>
                 <p><span class="hot">27</span>°<span class="cold">19</span>°</p>
             </div>
             <div id="row3" class="content">
                 <h3>Friday</h3>
                 <img src="images/some_clouds.png" alt="Dark clouds" class="img">
-                <p>some clouds</p>
+                <p class="info">some clouds</p>
                 <p><span class="hot">21</span>°<span class="cold">16</span>°</p>
             </div>
             <div id="row4" class="content">
                 <h3>Saturday</h3>
                 <img src="images/some_sun.png" alt="The Sun shining" class="img">
-                <p>some sun</p>
+                <p class="info">some sun</p>
                 <p><span class="hot">26</span>°<span class="cold">21</span>°</p>
             </div>
         </div>
